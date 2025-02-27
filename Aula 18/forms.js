@@ -1,7 +1,7 @@
 document.getElementById("formsdata1").addEventListener("submit", function (event) {
     event.preventDefault();
     
-    let formData = new FormData(event.target);  // Use "FormData" sem o "s"
+    let formData = new FormData(event.target);
 
     let dataArray = [];
 
@@ -9,5 +9,5 @@ document.getElementById("formsdata1").addEventListener("submit", function (event
         dataArray.push(pair[1]);
     }
 
-    console.log(dataArray);  // Exibe o array no console
+    console.log(dataArray); 
 });
