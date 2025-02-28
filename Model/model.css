@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    outline: 0;
+
+}
+
+:root {
+    --primary-color: azure;
+    --secondary-color: rgb(137, 237, 255);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container{
+  max-width: 640px;
+  padding: 50px;
+  margin: 50px auto;
+  background-color: lightblue;
+  margin-bottom: 20px;
+  border-radius: 20px;
+
+}
+
+form input, form label, form button{
+   display: block;
+   width: 100%;
+   border-radius: 10px;
+}
+
+form input{
+  font-size: 24px;  
+  height: 50px;
+  padding: 0 20px;
+
+}
+
+form input:focus{
+    outline: 2px solid var(--primary-color);
+}
+
+form button{
+    border: none;
+    background-color: var(--primary-color);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    
+}
+
+form button:hover{
+    background-color: var(--secondary-color);
+}
