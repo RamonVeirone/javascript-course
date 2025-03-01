@@ -1,6 +1,6 @@
-const nome = "Ramon";
+const nome = "Ramon Alves";
 const age = 24;
-const height = 1.85;
+const height = 1.68;
 const weight = 80;
 
 let imc = weight / (height ^ 2);
