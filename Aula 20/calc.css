@@ -60,3 +60,7 @@ form button{
 form button:hover{
     background-color: var(--secondary-color);
 }
+
+.paragrafo-resultado{
+    background-color: aquamarine;
+}
