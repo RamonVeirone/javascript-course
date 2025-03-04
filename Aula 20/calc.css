@@ -1,66 +1,86 @@
 * {
     box-sizing: border-box;
     outline: 0;
-
 }
 
 :root {
-    --primary-color: azure;
-    --secondary-color: rgb(137, 237, 255);
+    --primary-color: #f0f8ff; 
+    --secondary-color: #89edff;
+    --text-color: #333;
+    --error-color: #ff4d4d;
+    --success-color: #4caf50;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: var(--primary-color);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3em;
     line-height: 1.5em;
+    color: var(--text-color);
 }
 
-.container{
-  max-width: 640px;
-  padding: 50px;
-  margin: 50px auto;
-  background-color: lightblue;
-  margin-bottom: 20px;
-  border-radius: 20px;
-
+.container {
+    max-width: 640px;
+    padding: 30px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form input, form label, form button{
-   display: block;
-   width: 100%;
-   border-radius: 10px;
-   padding-top: 10px;
+form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-form input{
-  font-size: 24px;  
-  height: 50px;
-  padding: 0 20px;
-
+form label {
+    font-weight: bold;
 }
 
-form input:focus{
-    outline: 2px solid var(--primary-color);
+form input {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
-form button{
+form input:focus {
+    outline: 2px solid var(--secondary-color);
+}
+
+form button {
     border: none;
-    background-color: var(--primary-color);
-    color: black;
+    background-color: var(--secondary-color);
+    color: #fff;
     font-size: 18px;
     font-weight: 700;
     height: 50px;
     cursor: pointer;
+    border-radius: 10px;
+}
+
+form button:hover {
+    background-color: #6bcbd6;
+}
+
+#resultado {
     margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
-form button:hover{
-    background-color: var(--secondary-color);
+.paragrafo-resultado {
+    background-color: var(--success-color);
+    color: #fff;
 }
 
-.paragrafo-resultado{
-    background-color: aquamarine;
+.bad {
+    background-color: var(--error-color);
+    color: #fff;
 }
