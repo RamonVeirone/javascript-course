@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto</title>
+  </head>
+  <body>
+    <header>
+      <img src="" alt="Logo" class="img-logo" />
+      <nav>
+        <!-- img da logo -->
+        <h2>Acesse sua Área</h2>
+        <div class="nav-items">
+          <button>Aluno</button>
+          <button>Professores</button>
+          <button>Fornecedor</button>
+        </div>
+      </nav>
+    </header>
+    <section class="index">
+      <div class="side-bar">
+        <h1>Cadastro</h1>
+        <div class="cadastros">
+          <!-- id da pagina no botao -->
+          <button class="btn-cadastro" id="btnPessoaFisica">
+            Cadastro de pessoa física
+          </button>
+          <!-- id de pessoa juridica no botao -->
+          <button class="btn-cadastro" id="btnPessoaJuridica">Cadastro de pessoa jurídica</button>
+          <button class="btn-cadastro">Cadastro de professores</button>
+          <button class="btn-cadastro">Cadastro de fornecedores</button>
+          <button class="btn-cadastro">Cadastro de alunos</button>
+        </div>
+      </div>
+      <div class="tela-inicial">
+        <!-- img inicial aqui -->
+        <img src="" alt="Imagem inicial" />
+      </div>
+      <!-- colocar id da pagina ex: pessoaFisica -->
+      <div class="form-cadastro" id="pessoaFisica">
+        <h2>Cadastro de Pessoa Física</h2>
+        <form>
+          <div class="input-form">
+            <label for="nomeCompleto">Nome completo:</label>
+            <input type="text" placeholder="Nome completo" id="nomeCompleto" />
+          </div>
+          <div class="input-form">
+            <label for="cpf">Informe seu CPF</label>
+            <input type="text" placeholder="CPF" id="cpf" />
+          </div>
+          <div class="input-form">
+            <label for="dataNasc">Data de nascimento:</label>
+            <input type="date" placeholder="Data de nascimento" id="dataNasc" />
+          </div>
+          <div class="input-form">
+            <label for="ender">Endereços:</label>
+            <input type="text" placeholder="Endereços" id="ender" />
+          </div>
+          <button class="btn-enviar" type="submit">Enviar</button>
+          <div class="input-form senha">
+            <label for="senha">Crie uma Senha:</label>
+            <input
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="Senha"
+            />
+          </div>
+          <div class="input-form senha">
+            <label for="senhaConf">Confirmar senha:</label>
+            <input
+              type="password"
+              name="senhaConf"
+              id="senhaConf"
+              placeholder="Senha"
+            />
+          </div>
+        </form>
+      </div>
+      <!-- id de pessoa juridica -->
+      <div class="form-cadastro" id="pessoaJuridica">
+        <h2>Cadastro de Pessoa Jurídica</h2>
+        <form>
+          <div class="input-form">
+            <label for="nomeEmpresa">Nome da empresa:</label>
+            <input type="text" placeholder="Nome completo" id="nomeEmpresa" />
+          </div>
+          <div class="input-form">
+            <label for="cnpj">Informe seu CNPJ</label>
+            <input type="text" placeholder="CNPJ" id="cnpj" />
+          </div>
+          <div class="input-form">
+            <label for="porte">Porte da empresa:</label>
+            <input type="text" placeholder="Porte da empresa" id="porte" />
+          </div>
+          <div class="input-form">
+            <label for="ender">Endereço:</label>
+            <input type="text" placeholder="Endereço" id="ender" />
+          </div>
+          <button class="btn-enviar" type="submit">Enviar</button>
+          <div class="input-form senha">
+            <label for="senha">Crie uma Senha:</label>
+            <input
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="Senha"
+            />
+          </div>
+          <div class="input-form senha">
+            <label for="senhaConf">Confirmar senha:</label>
+            <input
+              type="password"
+              name="senhaConf"
+              id="senhaConf"
+              placeholder="Senha"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+  <!-- js -->
+  <script>
+    // função para replicar para outras paginas
+    document.querySelector("#btnPessoaFisica").addEventListener("click", () => {
+      document.querySelectorAll(".form-cadastro, .tela-inicial").forEach((item) => {
+        item.style.display = "none";
+      });
+      // colocar ID da pagina para ativar
+      document.querySelector("#pessoaFisica").style.display = "flex";
+    });
+    // replica para pessoa juridica
+    document.querySelector("#btnPessoaJuridica").addEventListener("click", () => {
+      document.querySelectorAll(".form-cadastro, .tela-inicial").forEach((item) => {
+        item.style.display = "none";
+      });
+      // colocar ID da pagina para ativar
+      document.querySelector("#pessoaJuridica").style.display = "flex";
+    });
+  </script>
+  <!-- css -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    header {
+      background-color: goldenrod;
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .img-logo {
+      height: 100px;
+      aspect-ratio: 1;
+      flex: 2;
+    }
+    nav {
+      background-color: #2684b1;
+      display: flex;
+      justify-content: space-between;
+      flex: 8;
+      padding: 1rem;
+      color: white;
+      border-radius: 5px 0 0 5px;
+    }
+    .nav-items {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .nav-items button {
+      min-width: 150px;
+      height: 2rem;
+      font-size: 1.25rem;
+      border: none;
+      outline: solid 2px transparent;
+      transition: 0.3s;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .nav-items button:hover {
+      background-color: #2684b1;
+      outline: solid 2px white;
+      color: white;
+    }
+    .index {
+      display: flex;
+      align-items: center;
+    }
+    .side-bar {
+      padding: 2rem 0;
+      background-color: #2684b1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      flex: 2;
+      color: white;
+    }
+    .cadastros {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+    }
+    .cadastros .btn-cadastro {
+      border: none;
+      background-color: white;
+      width: 60%;
+      padding: 1rem 0;
+      font-size: 1.25rem;
+      transition: 0.3s;
+      outline: solid 2px transparent;
+      cursor: pointer;
+    }
+    .cadastros .btn-cadastro:hover {
+      background-color: #2684b1;
+      outline: solid 2px white;
+      color: white;
+    }
+    .tela-inicial {
+      flex: 3;
+      display: flex;
+      justify-content: center;
+
+      /* display: none; */
+    }
+    .tela-inicial img {
+      width: 200px;
+    }
+    .form-cadastro {
+        padding: 2rem 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      flex: 3;
+      background-color: #2684b1;
+      margin: 0 100px;
+      color: white;
+    }
+    form{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    form .input-form{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    form .input-form input{
+        width: 200px;
+        border: none;
+        padding: 5px 1rem;
+        border-radius: 2px;
+    }
+    form button{
+        background-color: goldenrod;
+        border: none;
+        height: 50px;
+        width: 120px;
+        color: white;
+        align-self: center;
+        transition: .3s;
+        font-size: 1.15rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    form button:hover{
+        background-color: white;
+        color: #2684b1;
+    }
+  </style>
+</html>
