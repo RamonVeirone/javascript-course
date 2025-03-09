@@ -9,7 +9,6 @@
     <header>
       <img src="" alt="Logo" class="img-logo" />
       <nav>
-        <!-- img da logo -->
         <h2>Acesse sua Área</h2>
         <div class="nav-items">
           <button>Aluno</button>
@@ -22,22 +21,16 @@
       <div class="side-bar">
         <h1>Cadastro</h1>
         <div class="cadastros">
-          <!-- id da pagina no botao -->
-          <button class="btn-cadastro" id="btnPessoaFisica">
-            Cadastro de pessoa física
-          </button>
-          <!-- id de pessoa juridica no botao -->
+          <button class="btn-cadastro" id="btnPessoaFisica">Cadastro de pessoa física</button>
           <button class="btn-cadastro" id="btnPessoaJuridica">Cadastro de pessoa jurídica</button>
-          <button class="btn-cadastro">Cadastro de professores</button>
-          <button class="btn-cadastro">Cadastro de fornecedores</button>
-          <button class="btn-cadastro">Cadastro de alunos</button>
+          <button class="btn-cadastro" id="btnProfessor">Cadastro de professores</button>
+          <button class="btn-cadastro" id="btnFornecedor">Cadastro de fornecedores</button>
+          <button class="btn-cadastro" id="btnAluno">Cadastro de alunos</button>
         </div>
       </div>
       <div class="tela-inicial">
-        <!-- img inicial aqui -->
         <img src="" alt="Imagem inicial" />
       </div>
-      <!-- colocar id da pagina ex: pessoaFisica -->
       <div class="form-cadastro" id="pessoaFisica">
         <h2>Cadastro de Pessoa Física</h2>
         <form>
@@ -60,25 +53,14 @@
           <button class="btn-enviar" type="submit">Enviar</button>
           <div class="input-form senha">
             <label for="senha">Crie uma Senha:</label>
-            <input
-              type="password"
-              name="senha"
-              id="senha"
-              placeholder="Senha"
-            />
+            <input type="password" name="senha" id="senha" placeholder="Senha" />
           </div>
           <div class="input-form senha">
             <label for="senhaConf">Confirmar senha:</label>
-            <input
-              type="password"
-              name="senhaConf"
-              id="senhaConf"
-              placeholder="Senha"
-            />
+            <input type="password" name="senhaConf" id="senhaConf" placeholder="Senha" />
           </div>
         </form>
       </div>
-      <!-- id de pessoa juridica -->
       <div class="form-cadastro" id="pessoaJuridica">
         <h2>Cadastro de Pessoa Jurídica</h2>
         <form>
@@ -101,182 +83,280 @@
           <button class="btn-enviar" type="submit">Enviar</button>
           <div class="input-form senha">
             <label for="senha">Crie uma Senha:</label>
-            <input
-              type="password"
-              name="senha"
-              id="senha"
-              placeholder="Senha"
-            />
+            <input type="password" name="senha" id="senha" placeholder="Senha" />
           </div>
           <div class="input-form senha">
             <label for="senhaConf">Confirmar senha:</label>
-            <input
-              type="password"
-              name="senhaConf"
-              id="senhaConf"
-              placeholder="Senha"
-            />
+            <input type="password" name="senhaConf" id="senhaConf" placeholder="Senha" />
           </div>
         </form>
       </div>
+      <!-- Formulário de Cadastro de Professores -->
+      <div class="form-cadastro" id="professor">
+        <h2>Cadastro de Professores</h2>
+        <form>
+          <div class="input-form">
+            <label for="nomeCompletoProf">Nome completo:</label>
+            <input type="text" placeholder="Nome completo" id="nomeCompletoProf" />
+          </div>
+          <div class="input-form">
+            <label for="raProf">Informe seu RA:</label>
+            <input type="text" placeholder="RA" id="raProf" />
+          </div>
+          <div class="input-form">
+            <label for="disciplina">Disciplina:</label>
+            <input type="text" placeholder="Disciplina" id="disciplina" />
+          </div>
+          <!-- Botão Salvar posicionado antes dos campos de senha -->
+          <button class="btn-enviar" type="submit">Salvar</button>
+          <div class="input-form senha">
+            <label for="senhaProf">Crie uma Senha:</label>
+            <input type="password" name="senhaProf" id="senhaProf" placeholder="Senha" />
+          </div>
+          <div class="input-form senha">
+            <label for="senhaConfProf">Confirmar senha:</label>
+            <input type="password" name="senhaConfProf" id="senhaConfProf" placeholder="Senha" />
+          </div>
+          <!-- Botão Cadastrar-se mantido no final -->
+          <button class="btn-enviar" type="button">Cadastrar-se</button>
+        </form>
+      </div>
+      <!-- Formulário de Cadastro de Fornecedores -->
+      <div class="form-cadastro" id="fornecedor">
+        <h2>Cadastro de Fornecedores</h2>
+        <form>
+          <div class="input-form">
+            <label for="nomeEmpresaFornecedor">Nome da empresa:</label>
+            <input type="text" placeholder="Nome da empresa" id="nomeEmpresaFornecedor" />
+          </div>
+          <div class="input-form">
+            <label for="cnpjFornecedor">Informe seu CNPJ:</label>
+            <input type="text" placeholder="CNPJ" id="cnpjFornecedor" />
+          </div>
+          <div class="input-form">
+            <label for="enderecoFornecedor">Endereço:</label>
+            <input type="text" placeholder="Endereço" id="enderecoFornecedor" />
+          </div>
+          <div class="input-form">
+            <label for="tipoMaterial">Tipo de material:</label>
+            <input type="text" placeholder="Tipo de material" id="tipoMaterial" />
+          </div>
+          <!-- Botão Salvar posicionado antes dos campos de senha -->
+          <button class="btn-enviar" type="submit">Salvar</button>
+          <div class="input-form senha">
+            <label for="cnpjSenha">CNPJ:</label>
+            <input type="password" name="cnpjSenha" id="cnpjSenha" placeholder="CNPJ" />
+          </div>
+          <div class="input-form senha">
+            <label for="senhaConfFornecedor">Confirmar senha:</label>
+            <input type="password" name="senhaConfFornecedor" id="senhaConfFornecedor" placeholder="Senha" />
+          </div>
+          <!-- Botão Cadastrar-se mantido no final -->
+          <button class="btn-enviar" type="button">Cadastrar-se</button>
+        </form>
+      </div>
+      <!-- Formulário de Cadastro de Alunos -->
+      <div class="form-cadastro" id="aluno">
+        <h2>Cadastro de Alunos</h2>
+        <form>
+          <div class="input-form">
+            <label for="nomeCompletoAluno">Nome completo:</label>
+            <input type="text" placeholder="Nome completo" id="nomeCompletoAluno" />
+          </div>
+          <div class="input-form">
+            <label for="raAluno">Informe seu RA:</label>
+            <input type="text" placeholder="RA" id="raAluno" />
+          </div>
+          <div class="input-form">
+            <label for="turma">Turma:</label>
+            <input type="text" placeholder="Turma" id="turma" />
+          </div>
+          <!-- Botão Salvar antes dos campos de senha -->
+          <button class="btn-enviar" type="submit">Salvar</button>
+          <div class="input-form senha">
+            <label for="senhaAluno">Senha:</label>
+            <input type="password" name="senhaAluno" id="senhaAluno" placeholder="Senha" />
+          </div>
+          <div class="input-form senha">
+            <label for="senhaConfAluno">Confirmar senha:</label>
+            <input type="password" name="senhaConfAluno" id="senhaConfAluno" placeholder="Senha" />
+          </div>
+          <!-- Botão Cadastrar-se no final -->
+          <button class="btn-enviar" type="button">Cadastrar-se</button>
+        </form>
+      </div>
     </section>
-  </body>
-  <!-- js -->
-  <script>
-    // função para replicar para outras paginas
-    document.querySelector("#btnPessoaFisica").addEventListener("click", () => {
-      document.querySelectorAll(".form-cadastro, .tela-inicial").forEach((item) => {
-        item.style.display = "none";
+    <script>
+      document.querySelector("#btnPessoaFisica").addEventListener("click", () => {
+        document.querySelectorAll(".form-cadastro, .tela-inicial").forEach((item) => {
+          item.style.display = "none";
+        });
+        document.querySelector("#pessoaFisica").style.display = "flex";
       });
-      // colocar ID da pagina para ativar
-      document.querySelector("#pessoaFisica").style.display = "flex";
-    });
-    // replica para pessoa juridica
-    document.querySelector("#btnPessoaJuridica").addEventListener("click", () => {
-      document.querySelectorAll(".form-cadastro, .tela-inicial").forEach((item) => {
-        item.style.display = "none";
-      });
-      // colocar ID da pagina para ativar
-      document.querySelector("#pessoaJuridica").style.display = "flex";
-    });
-  </script>
-  <!-- css -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-    }
-    header {
-      background-color: goldenrod;
-      display: flex;
-      align-items: center;
-      padding: 1rem 0;
-    }
-    .img-logo {
-      height: 100px;
-      aspect-ratio: 1;
-      flex: 2;
-    }
-    nav {
-      background-color: #2684b1;
-      display: flex;
-      justify-content: space-between;
-      flex: 8;
-      padding: 1rem;
-      color: white;
-      border-radius: 5px 0 0 5px;
-    }
-    .nav-items {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    .nav-items button {
-      min-width: 150px;
-      height: 2rem;
-      font-size: 1.25rem;
-      border: none;
-      outline: solid 2px transparent;
-      transition: 0.3s;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .nav-items button:hover {
-      background-color: #2684b1;
-      outline: solid 2px white;
-      color: white;
-    }
-    .index {
-      display: flex;
-      align-items: center;
-    }
-    .side-bar {
-      padding: 2rem 0;
-      background-color: #2684b1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 50px;
-      flex: 2;
-      color: white;
-    }
-    .cadastros {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      width: 100%;
-    }
-    .cadastros .btn-cadastro {
-      border: none;
-      background-color: white;
-      width: 60%;
-      padding: 1rem 0;
-      font-size: 1.25rem;
-      transition: 0.3s;
-      outline: solid 2px transparent;
-      cursor: pointer;
-    }
-    .cadastros .btn-cadastro:hover {
-      background-color: #2684b1;
-      outline: solid 2px white;
-      color: white;
-    }
-    .tela-inicial {
-      flex: 3;
-      display: flex;
-      justify-content: center;
 
-      /* display: none; */
-    }
-    .tela-inicial img {
-      width: 200px;
-    }
-    .form-cadastro {
+      document.querySelector("#btnPessoaJuridica").addEventListener("click", () => {
+        document.querySelectorAll(".form-cadastro, .tela-inicial").forEach((item) => {
+          item.style.display = "none";
+        });
+        document.querySelector("#pessoaJuridica").style.display = "flex";
+      });
+
+      document.querySelector("#btnProfessor").addEventListener("click", () => {
+        document.querySelectorAll(".form-cadastro, .tela-inicial").forEach((item) => {
+          item.style.display = "none";
+        });
+        document.querySelector("#professor").style.display = "flex";
+      });
+
+      document.querySelector("#btnFornecedor").addEventListener("click", () => {
+        document.querySelectorAll(".form-cadastro, .tela-inicial").forEach((item) => {
+          item.style.display = "none";
+        });
+        document.querySelector("#fornecedor").style.display = "flex";
+      });
+
+      document.querySelector("#btnAluno").addEventListener("click", () => {
+        document.querySelectorAll(".form-cadastro, .tela-inicial").forEach((item) => {
+          item.style.display = "none";
+        });
+        document.querySelector("#aluno").style.display = "flex";
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      header {
+        background-color: goldenrod;
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+      }
+      .img-logo {
+        height: 100px;
+        aspect-ratio: 1;
+        flex: 2;
+      }
+      nav {
+        background-color: #2684b1;
+        display: flex;
+        justify-content: space-between;
+        flex: 8;
+        padding: 1rem;
+        color: white;
+        border-radius: 5px 0 0 5px;
+      }
+      .nav-items {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .nav-items button {
+        min-width: 150px;
+        height: 2rem;
+        font-size: 1.25rem;
+        border: none;
+        outline: solid 2px transparent;
+        transition: 0.3s;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .nav-items button:hover {
+        background-color: #2684b1;
+        outline: solid 2px white;
+        color: white;
+      }
+      .index {
+        display: flex;
+        align-items: center;
+      }
+      .side-bar {
         padding: 2rem 0;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      flex: 3;
-      background-color: #2684b1;
-      margin: 0 100px;
-      color: white;
-    }
-    form{
+        background-color: #2684b1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        flex: 2;
+        color: white;
+      }
+      .cadastros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+      }
+      .cadastros .btn-cadastro {
+        border: none;
+        background-color: white;
+        width: 60%;
+        padding: 1rem 0;
+        font-size: 1.25rem;
+        transition: 0.3s;
+        outline: solid 2px transparent;
+        cursor: pointer;
+      }
+      .cadastros .btn-cadastro:hover {
+        background-color: #2684b1;
+        outline: solid 2px white;
+        color: white;
+      }
+      .tela-inicial {
+        flex: 3;
+        display: flex;
+        justify-content: center;
+      }
+      .tela-inicial img {
+        width: 200px;
+      }
+      .form-cadastro {
+        padding: 2rem 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        flex: 3;
+        background-color: #2684b1;
+        margin: 0 100px;
+        color: white;
+      }
+      form {
         margin-top: 50px;
         display: flex;
         flex-direction: column;
         gap: 2rem;
-    }
-    form .input-form{
+      }
+      form .input-form {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-    }
-    form .input-form input{
+      }
+      form .input-form input {
         width: 200px;
         border: none;
         padding: 5px 1rem;
         border-radius: 2px;
-    }
-    form button{
+      }
+      form button {
         background-color: goldenrod;
         border: none;
         height: 50px;
         width: 120px;
         color: white;
         align-self: center;
-        transition: .3s;
+        transition: 0.3s;
         font-size: 1.15rem;
         border-radius: 5px;
         cursor: pointer;
-    }
-    form button:hover{
+      }
+      form button:hover {
         background-color: white;
         color: #2684b1;
-    }
-  </style>
+      }
+    </style>
+  </body>
 </html>
