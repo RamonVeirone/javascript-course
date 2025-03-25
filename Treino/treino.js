@@ -9,3 +9,7 @@ function max(x, y) {
 }
 
 console.log(max(30, 20));
+
+for (i = 0; i <= 10; i++); {
+  console.log(i);
+}
