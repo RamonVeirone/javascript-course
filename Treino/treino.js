@@ -1,1 +1,1 @@
-console.log("Treino");
+const formulario = document.querySelector("formulario")
