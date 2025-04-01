@@ -1,1 +1,1 @@
-const formulario = document.querySelector("formulario")
+console.log("Olá, mundo!")
