@@ -30,4 +30,8 @@ const person = {
 
 const personJson = JSON.stringify(person); // comando pra enviar para para servidores
 
-console.log(personJson)
+// console.log(personJson)
+
+for (let index = 1; index <= 10; index++){
+  console.log(index)
+}
