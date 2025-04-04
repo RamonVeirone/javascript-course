@@ -32,12 +32,12 @@ const personJson = JSON.stringify(person); // comando pra enviar para para servi
 
 // console.log(personJson)
 
-for (let index = 1; index <= 10; index++){
-  console.log(index)
+for (let index = 1; index <= 10; index++) {
+  console.log(index);
 }
 
 const carros = ["BMW", "Audi", "Mercedes"];
 
-for (let i = 0; i < carros.length; i++){
-  console.log(carros[i])
+for (let i = 0; i < carros.length; i++) {
+  console.log(carros[i]);
 }
