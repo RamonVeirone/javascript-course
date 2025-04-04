@@ -28,6 +28,6 @@ const person = {
   hobbies: ["Jogar videogame", "Economia", "Tecnologia", "Investimentos"],
 };
 
-const primeiroNome = person.firstName;
+const personJson = JSON.stringify(person); // comando pra enviar para para servidores
 
-console.log(primeiroNome)
+console.log(personJson)
